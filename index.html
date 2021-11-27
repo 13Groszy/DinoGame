@@ -8,9 +8,11 @@
 </head>
 <body>
     <div class="game" >
-        <div class="character"></div>
+        <div class="character"><img src="/images/human.svg"></div>
         <div class="enemy"></div>
-        <button onclick="play()">PLAY</button>
+        <div class="button" onclick="play()"><p>PRESS TO PLAY</p></div>
+        <div class="restart" onclick="reset()"><p>RESTART</p></div>
+        <div class="score"><p>SCORE: <span class="counting">0</span></p></div>
     </div>
     <script src="/app.js"></script>
 </body>
