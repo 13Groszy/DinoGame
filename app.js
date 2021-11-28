@@ -2,8 +2,11 @@ var character = document.querySelector(".character");
 var enemy = document.querySelector(".enemy");
 var button = document.querySelector(".button");
 var restart = document.querySelector(".restart");
+var youDied = document.querySelector(".youDied");
 var countedScore = document.querySelector(".score")
 var counting = document.querySelector(".counting")
+var countingTwo = document.querySelector(".countingTwo")
+
 var score = -1;
 
 //character jump function -> add jump by adding the class
@@ -33,6 +36,7 @@ function play(){
             enemy.style.display = "none";
             button.style.display = "none";
             restart.style.display = "block";
+            youDied.style.display = "block";
             clearTimeout(scoreCounter);
         }
     },10)
@@ -40,15 +44,21 @@ function play(){
     var scoreCounter = setInterval(function() {
         score ++;
         counting.innerHTML = `${score}`;
-        },1000)
+        countingTwo.innerHTML = `${score}`;
+    //randomise enemy width
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        var random = getRandomArbitrary(20, 60);
+        random = Math.round(random);
+        console.log(random);
+        enemy.style.width = `${random}`
+              },1000)
 }
 //reset the website to reload animations and enemy place
 function reset() {
     window.location.reload();
 }
-
-
-//randomise enemy distance
 
 //speed up the enemies after time
 

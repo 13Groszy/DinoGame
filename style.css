@@ -33,7 +33,7 @@
 
 @keyframes enemy {
     0%{left:500px;}
-    100%{left:-40px;}
+    100%{left:-100px;}
 }
 @keyframes jump {
     0%{top:250px;}
@@ -51,7 +51,7 @@
     background-color: green;
     text-align: center;
 }
-.restart{
+.restart, .youDied{
     width:100px;
     height: 30px;
     border-radius: 5px;
@@ -60,7 +60,13 @@
     text-align: center;
     padding-top:0.5rem;
     margin:auto;
+    margin-top:2rem;
     display: none;
+}
+.youDied{
+    width:220px;
+    padding-top: -1rem;
+    margin-top: -2.5rem;
 }
 .score{
     margin-top:10%;
