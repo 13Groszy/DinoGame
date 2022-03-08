@@ -1,20 +1,237 @@
-<html lang="en" onclick="jump()">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+    <link rel="icon" type="image/png" href="/images/myPhotoPlaceholder.png">
+    <link rel="stylesheet" href="stylesheet.css">
+<!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>M.Daszkiewicz Portfolio</title>
 </head>
 <body>
-    <div class="game" >
-        <div class="character"><img src="/images/human.svg"></div>
-        <div class="enemy"></div>
-        <div class="button" onclick="play()"><p>PRESS TO PLAY</p></div>
-        <div class="youDied"><p>YOU DIED WITH SCORE: <span class="countingTwo">0</span></p></p></div>
-        <div class="restart" onclick="reset()"><p>RESTART</p></div>
-        <div class="score"><p>SCORE: <span class="counting">0</span></p></div>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-code-alt'></i>
+                <div class="logo_name">Top Drive</div>
+            </div>
+            <i class="bx bx-menu" id="button"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="#aboutMe">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="#myStack">
+                    <i class='bx bxs-coin-stack'></i>
+                    <span class="links_name">My Stack</span>
+                </a>
+            </li>
+            <li>
+                <a href="#myProjects">
+                    <i class='bx bxs-file-doc' ></i>
+                    <span class="links_name">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/13Groszy" target="_blank">
+                    <i class='bx bxl-github' ></i>
+                    <span class="links_name">GitHub</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    <i class='bx bxs-contact' ></i>
+                    <span class="links_name">Contact</span>
+                </a>
+            </li>
+        </ul>
+        <a href="https://www.linkedin.com/in/mateusz-daszkiewicz-66371a196/" target="_blank">
+            <div class="profile_content">
+                <div class="profile">
+                    <div class="profile_details">
+                        <img src="/images/myPhotoPlaceholder.png" alt="This is just placeholder of my photo.">
+                        <div class="job_name">
+                            <div class="name">Mateusz Daszkiewicz</div>
+                            <div class="job">Junior Front-End Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
-    <script src="/app.js"></script>
+    <main>
+        <header>
+            <div class="headerWrapper">
+                <h3>Hi there 👋 I'm</h3>
+                <h1 class="blue">< Top Drive ></h1>
+                <h3>Design minded frond-end developer.</h3>
+                <a class="button" href="#contact">HIRE ME</a>
+            </div>
+            <div class="background">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#000000;display:block;z-index:1;position:relative" width="2000" height="950" preserveAspectRatio="xMidYMid" viewBox="0 0 1400 950">
+                    <g transform="translate(700,475) scale(1,1) translate(-700,-475)"><style type="text/css">
+                      @keyframes ld-speed-dash {
+                        0% { transform: translate(0,-1985.892431568863px); }
+                        100% { transform: translate(0,1985.892431568863px); }
+                      }
+                      .ld.ld-speed-dash {
+                        animation: ld-speed-dash 50s linear infinite;
+                      }
+                    </style>
+                      <g transform="translate(700,475)">
+                        <g style="transform:rotate(45deg)">
+                          <line x1="-663.8792471508758" x2="-663.8792471508758" y1="0" y2="-159.6261254640135" stroke="#57df57" stroke-width="3.33621975146867" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -42.02599973926826s;animation-duration:50s"></line><line x1="327.5058410401723" x2="327.5058410401723" y1="0" y2="-101.48542541578277" stroke="#57df57" stroke-width="3.472377135137761" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -19.10049586579636s;animation-duration:25s"></line><line x1="408.61642504653645" x2="408.61642504653645" y1="0" y2="-122.41998597249241" stroke="#272af7" stroke-width="2.4018422481732102" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -11.825204906169951s;animation-duration:50s"></line><line x1="-429.616467572132" x2="-429.616467572132" y1="0" y2="-144.8491703774742" stroke="#272af7" stroke-width="2.0522796855845735" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.75104464719708s;animation-duration:50s"></line><line x1="-325.5882412454077" x2="-325.5882412454077" y1="0" y2="-154.38801652262873" stroke="#57df57" stroke-width="2.7692053384122293" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.133500700553083s;animation-duration:50s"></line><line x1="386.0576329639371" x2="386.0576329639371" y1="0" y2="-135.0297990942115" stroke="#272af7" stroke-width="2.636782824142089" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -3.5469405225135753s;animation-duration:25s"></line><line x1="-254.19187254086006" x2="-254.19187254086006" y1="0" y2="-138.70392435629591" stroke="#57df57" stroke-width="1.0995091017715208" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.943734045651746s;animation-duration:25s"></line><line x1="-192.76849540359368" x2="-192.76849540359368" y1="0" y2="-281.70276182477596" stroke="#57df57" stroke-width="4.58247558997138" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -24.7346483359407s;animation-duration:50s"></line><line x1="-268.9726052588854" x2="-268.9726052588854" y1="0" y2="-246.80740341764894" stroke="#272af7" stroke-width="0.4417476761502248" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.995165097043234s;animation-duration:50s"></line><line x1="-621.051839658457" x2="-621.051839658457" y1="0" y2="-121.58389457861641" stroke="#57df57" stroke-width="4.107116428117434" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.873181761906031s;animation-duration:25s"></line><line x1="-373.31210250611093" x2="-373.31210250611093" y1="0" y2="-90.18078774507211" stroke="#57df57" stroke-width="0.15860152469564848" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.10835085658201s;animation-duration:25s"></line><line x1="-639.5966389533472" x2="-639.5966389533472" y1="0" y2="-228.52355650141865" stroke="#272af7" stroke-width="3.7203681593932703" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -24.73568785345904s;animation-duration:25s"></line><line x1="-305.2673140662619" x2="-305.2673140662619" y1="0" y2="-165.0905281108507" stroke="#272af7" stroke-width="3.8214665124246783" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.56902774348714s;animation-duration:25s"></line><line x1="-200.101410421016" x2="-200.101410421016" y1="0" y2="-226.9904337723354" stroke="#272af7" stroke-width="1.25584227363982" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.03392054233105s;animation-duration:25s"></line><line x1="-697.7193755540555" x2="-697.7193755540555" y1="0" y2="-107.86380023560764" stroke="#272af7" stroke-width="0.8192802699331858" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -42.87209833925352s;animation-duration:25s"></line><line x1="518.9854064423043" x2="518.9854064423043" y1="0" y2="-290.32239726021305" stroke="#57df57" stroke-width="1.2162542975385804" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -17.430256506907593s;animation-duration:50s"></line><line x1="497.3779707796036" x2="497.3779707796036" y1="0" y2="-227.71776070950932" stroke="#272af7" stroke-width="4.954977353206926" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.803530819450458s;animation-duration:25s"></line><line x1="-312.79667111781157" x2="-312.79667111781157" y1="0" y2="-110.05614481448924" stroke="#57df57" stroke-width="4.092346151674824" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -25.589459062054143s;animation-duration:50s"></line><line x1="496.0394790021425" x2="496.0394790021425" y1="0" y2="-263.215872548669" stroke="#272af7" stroke-width="0.30344072558431523" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -16.424077884693823s;animation-duration:50s"></line><line x1="-19.258460299449087" x2="-19.258460299449087" y1="0" y2="-147.83166419507256" stroke="#272af7" stroke-width="0.292660145366912" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -31.706427256185865s;animation-duration:25s"></line><line x1="-550.4777441617659" x2="-550.4777441617659" y1="0" y2="-196.3897313431502" stroke="#57df57" stroke-width="0.9915898008494783" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -2.2818954825697624s;animation-duration:25s"></line><line x1="57.60457510150658" x2="57.60457510150658" y1="0" y2="-160.0787327107544" stroke="#272af7" stroke-width="2.9416604355567957" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -30.04182235226578s;animation-duration:50s"></line><line x1="388.22268141557987" x2="388.22268141557987" y1="0" y2="-119.13773622910432" stroke="#272af7" stroke-width="1.569036684206817" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.685527290904446s;animation-duration:25s"></line><line x1="-326.36889961409224" x2="-326.36889961409224" y1="0" y2="-115.20632914327695" stroke="#272af7" stroke-width="2.5266813557159216" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.6310707418406s;animation-duration:50s"></line><line x1="129.60610725460344" x2="129.60610725460344" y1="0" y2="-143.62965620367976" stroke="#57df57" stroke-width="3.3847215452956094" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -17.314002621738933s;animation-duration:50s"></line><line x1="-233.72409958784058" x2="-233.72409958784058" y1="0" y2="-226.27973834092197" stroke="#57df57" stroke-width="1.4233360833769182" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.829362657553105s;animation-duration:50s"></line><line x1="-537.7437052381493" x2="-537.7437052381493" y1="0" y2="-254.75586548276513" stroke="#272af7" stroke-width="4.585811587247882" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -6.943004505542516s;animation-duration:50s"></line><line x1="-71.61921656031262" x2="-71.61921656031262" y1="0" y2="-234.76359311524334" stroke="#272af7" stroke-width="0.8920388866920337" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.230619150923971s;animation-duration:50s"></line><line x1="-534.5260513627804" x2="-534.5260513627804" y1="0" y2="-230.4021511788709" stroke="#57df57" stroke-width="3.1421131194898866" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.524190861575406s;animation-duration:25s"></line><line x1="-665.2969496918807" x2="-665.2969496918807" y1="0" y2="-293.4388393744367" stroke="#272af7" stroke-width="2.2830561127612103" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.057061996690074s;animation-duration:25s"></line><line x1="400.8995964144433" x2="400.8995964144433" y1="0" y2="-246.14221701625988" stroke="#57df57" stroke-width="0.12416067239851558" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -40.019860437381496s;animation-duration:50s"></line><line x1="-341.01583457315303" x2="-341.01583457315303" y1="0" y2="-158.84954601743885" stroke="#57df57" stroke-width="1.5686847520857161" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.399934356045954s;animation-duration:50s"></line><line x1="360.92564288481583" x2="360.92564288481583" y1="0" y2="-190.20094465966798" stroke="#57df57" stroke-width="0.15681700911010954" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -40.995772811165345s;animation-duration:25s"></line><line x1="-460.4522468102293" x2="-460.4522468102293" y1="0" y2="-167.8877852729787" stroke="#57df57" stroke-width="1.0645183805723868" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.95057013753644s;animation-duration:50s"></line><line x1="-628.8911659599535" x2="-628.8911659599535" y1="0" y2="-211.84722402415224" stroke="#272af7" stroke-width="2.6655179975531427" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -35.07291339383393s;animation-duration:25s"></line><line x1="-381.95429827380167" x2="-381.95429827380167" y1="0" y2="-140.3664118255589" stroke="#272af7" stroke-width="2.2042740719129617" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.407753686650377s;animation-duration:50s"></line><line x1="39.63190017187812" x2="39.63190017187812" y1="0" y2="-273.86434257637666" stroke="#272af7" stroke-width="2.4119234718704474" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.906576579649986s;animation-duration:50s"></line><line x1="-384.70492617557295" x2="-384.70492617557295" y1="0" y2="-110.08027886875509" stroke="#272af7" stroke-width="0.9539282851178399" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.77734836453925s;animation-duration:50s"></line><line x1="-186.25701174911816" x2="-186.25701174911816" y1="0" y2="-118.03319649260553" stroke="#272af7" stroke-width="1.8162501799835085" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.540332491714059s;animation-duration:25s"></line><line x1="-359.6098449634821" x2="-359.6098449634821" y1="0" y2="-139.09833182377872" stroke="#272af7" stroke-width="4.15121177588145" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -25.042322012600394s;animation-duration:50s"></line><line x1="-85.24198049697169" x2="-85.24198049697169" y1="0" y2="-124.64936090525703" stroke="#272af7" stroke-width="3.0120491139282537" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.233633634457966s;animation-duration:50s"></line><line x1="-602.8677179379911" x2="-602.8677179379911" y1="0" y2="-260.50576574066963" stroke="#272af7" stroke-width="1.0645722979844063" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -47.41591673871488s;animation-duration:50s"></line><line x1="-103.49864010788914" x2="-103.49864010788914" y1="0" y2="-211.93189458682605" stroke="#272af7" stroke-width="3.1646712610465135" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -33.58004826887583s;animation-duration:50s"></line><line x1="144.4033873282067" x2="144.4033873282067" y1="0" y2="-179.15413409687295" stroke="#57df57" stroke-width="1.613202530425396" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.4191183662550344s;animation-duration:50s"></line><line x1="325.2122481269913" x2="325.2122481269913" y1="0" y2="-124.13774815257699" stroke="#272af7" stroke-width="3.430544222330767" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.036709335018674s;animation-duration:50s"></line><line x1="-470.10736323203463" x2="-470.10736323203463" y1="0" y2="-258.8149472483158" stroke="#272af7" stroke-width="3.787477163071191" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -7.443401575346386s;animation-duration:25s"></line><line x1="-158.36297528453576" x2="-158.36297528453576" y1="0" y2="-290.1761384116487" stroke="#57df57" stroke-width="4.111768777601656" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.02440711097229s;animation-duration:50s"></line><line x1="311.6836737685246" x2="311.6836737685246" y1="0" y2="-232.41802467990453" stroke="#272af7" stroke-width="0.42597776712252067" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -47.43639691477781s;animation-duration:50s"></line><line x1="-209.61266344021024" x2="-209.61266344021024" y1="0" y2="-169.18425122297884" stroke="#57df57" stroke-width="1.6151484400170313" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -49.653663639195834s;animation-duration:25s"></line><line x1="193.30982073369012" x2="193.30982073369012" y1="0" y2="-108.26109506644706" stroke="#272af7" stroke-width="2.1891747761398648" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.350572067624025s;animation-duration:25s"></line><line x1="-411.93190182434563" x2="-411.93190182434563" y1="0" y2="-269.3971057574719" stroke="#57df57" stroke-width="2.015512403151792" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -13.420961164587041s;animation-duration:25s"></line><line x1="86.85764493428718" x2="86.85764493428718" y1="0" y2="-274.3173773055754" stroke="#57df57" stroke-width="2.7017271092726816" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.396190662911675s;animation-duration:50s"></line><line x1="477.2022109409076" x2="477.2022109409076" y1="0" y2="-165.42586838773946" stroke="#272af7" stroke-width="3.454080831366805" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.01616690760932s;animation-duration:25s"></line><line x1="373.63319491121655" x2="373.63319491121655" y1="0" y2="-146.51309887835143" stroke="#272af7" stroke-width="4.99950138764372" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.667022086492942s;animation-duration:25s"></line><line x1="-111.39104861231304" x2="-111.39104861231304" y1="0" y2="-140.95555506444094" stroke="#272af7" stroke-width="0.4200495670228499" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -3.6652572928627003s;animation-duration:25s"></line><line x1="6.787554854119904" x2="6.787554854119904" y1="0" y2="-249.79626488477965" stroke="#57df57" stroke-width="0.6778463199237539" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -42.02201393081012s;animation-duration:25s"></line><line x1="-66.91991921337639" x2="-66.91991921337639" y1="0" y2="-137.59645276402722" stroke="#57df57" stroke-width="2.2647513481374872" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -34.62245772230762s;animation-duration:25s"></line><line x1="444.94035868658" x2="444.94035868658" y1="0" y2="-174.91504770923964" stroke="#57df57" stroke-width="2.1379112149449697" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -7.887658852590196s;animation-duration:25s"></line><line x1="-339.055477442343" x2="-339.055477442343" y1="0" y2="-162.99692221787487" stroke="#272af7" stroke-width="1.4198144781085342" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.781480887035366s;animation-duration:25s"></line><line x1="183.7628057758279" x2="183.7628057758279" y1="0" y2="-162.29641154528628" stroke="#57df57" stroke-width="0.44404143544048313" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -12.665724388233611s;animation-duration:50s"></line><line x1="-447.6029345340108" x2="-447.6029345340108" y1="0" y2="-91.68021475328695" stroke="#57df57" stroke-width="4.6528028167356785" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.63221306871098s;animation-duration:25s"></line><line x1="-45.65050156160617" x2="-45.65050156160617" y1="0" y2="-176.83352284343363" stroke="#272af7" stroke-width="4.377907455584081" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.40227369544029s;animation-duration:25s"></line><line x1="286.9938959502318" x2="286.9938959502318" y1="0" y2="-288.0309690678655" stroke="#57df57" stroke-width="0.8481415540089721" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.75858776163845s;animation-duration:50s"></line><line x1="-355.45248240504134" x2="-355.45248240504134" y1="0" y2="-237.3390631813282" stroke="#272af7" stroke-width="0.8521477465977922" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.753396289498244s;animation-duration:25s"></line><line x1="450.36382643300686" x2="450.36382643300686" y1="0" y2="-267.54021024423434" stroke="#57df57" stroke-width="2.7558687352309885" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -11.424817508900986s;animation-duration:50s"></line><line x1="-342.90103508198604" x2="-342.90103508198604" y1="0" y2="-254.42281300356873" stroke="#272af7" stroke-width="2.368661742170427" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.49577863712991s;animation-duration:50s"></line><line x1="474.5981815423482" x2="474.5981815423482" y1="0" y2="-160.86301947120532" stroke="#57df57" stroke-width="3.342609480892161" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.78395881669478s;animation-duration:50s"></line><line x1="-563.3369073972669" x2="-563.3369073972669" y1="0" y2="-161.91120391949642" stroke="#57df57" stroke-width="2.168286534550713" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.230007210750685s;animation-duration:50s"></line><line x1="470.1180837445843" x2="470.1180837445843" y1="0" y2="-144.97685012751742" stroke="#272af7" stroke-width="1.446183225277059" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.89435961154287s;animation-duration:50s"></line><line x1="-556.1058431816288" x2="-556.1058431816288" y1="0" y2="-289.0960850635197" stroke="#272af7" stroke-width="4.638785751989793" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -28.79250095096757s;animation-duration:50s"></line><line x1="252.51403666672002" x2="252.51403666672002" y1="0" y2="-87.44097359052608" stroke="#272af7" stroke-width="4.999916753476439" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -26.331938238566842s;animation-duration:25s"></line><line x1="392.82873509570203" x2="392.82873509570203" y1="0" y2="-166.4372421274611" stroke="#57df57" stroke-width="1.5679830031683828" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -35.487863403942434s;animation-duration:50s"></line><line x1="-610.3090745051555" x2="-610.3090745051555" y1="0" y2="-121.16057458060311" stroke="#57df57" stroke-width="3.0188171000396324" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.5637751326432s;animation-duration:25s"></line><line x1="371.1160820550016" x2="371.1160820550016" y1="0" y2="-167.1059252523321" stroke="#272af7" stroke-width="0.5505256232260858" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -33.522502687719644s;animation-duration:25s"></line><line x1="-489.8139662993152" x2="-489.8139662993152" y1="0" y2="-229.5721093122815" stroke="#272af7" stroke-width="2.0611411300802507" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.239328567390203s;animation-duration:50s"></line><line x1="-5.56437750628036" x2="-5.56437750628036" y1="0" y2="-253.38749793066026" stroke="#57df57" stroke-width="2.400351041905602" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.12337002272052s;animation-duration:25s"></line><line x1="549.075824279698" x2="549.075824279698" y1="0" y2="-198.9733267953299" stroke="#57df57" stroke-width="2.9084247272663744" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.682332563432134s;animation-duration:25s"></line><line x1="464.8603313496943" x2="464.8603313496943" y1="0" y2="-276.73538617083005" stroke="#272af7" stroke-width="0.018215922411677354" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -48.46616382501549s;animation-duration:50s"></line><line x1="-450.9920370208532" x2="-450.9920370208532" y1="0" y2="-121.62867147622835" stroke="#272af7" stroke-width="2.2503015105058486" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -22.138345710573358s;animation-duration:50s"></line><line x1="-6.659150482743081" x2="-6.659150482743081" y1="0" y2="-269.02298334402144" stroke="#272af7" stroke-width="0.29152367649894373" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.13420350943279s;animation-duration:25s"></line><line x1="516.3578289790577" x2="516.3578289790577" y1="0" y2="-212.36765236173693" stroke="#272af7" stroke-width="0.9543445398949624" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -41.56672720548159s;animation-duration:50s"></line><line x1="574.7583536734076" x2="574.7583536734076" y1="0" y2="-147.72830339989088" stroke="#57df57" stroke-width="3.7808188172762716" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.14871556145671s;animation-duration:25s"></line><line x1="502.61016336936586" x2="502.61016336936586" y1="0" y2="-288.1632866165651" stroke="#272af7" stroke-width="1.7776879482149333" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.53094278039854s;animation-duration:50s"></line><line x1="-317.8187198884102" x2="-317.8187198884102" y1="0" y2="-185.1180976915597" stroke="#57df57" stroke-width="3.7417039303330704" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -23.000568155086974s;animation-duration:25s"></line><line x1="-68.92246454175357" x2="-68.92246454175357" y1="0" y2="-111.44992868302609" stroke="#57df57" stroke-width="3.6636757327455447" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.54613941839711s;animation-duration:50s"></line><line x1="-37.89485232773653" x2="-37.89485232773653" y1="0" y2="-190.54133602326718" stroke="#272af7" stroke-width="0.3925656827962021" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -24.80453294689734s;animation-duration:25s"></line><line x1="442.54715144796273" x2="442.54715144796273" y1="0" y2="-163.46370471746945" stroke="#272af7" stroke-width="1.6480033945306871" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.234464486948074s;animation-duration:25s"></line><line x1="-221.40116595728463" x2="-221.40116595728463" y1="0" y2="-233.25235312162275" stroke="#57df57" stroke-width="2.8062781269544868" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -44.760772702760775s;animation-duration:25s"></line><line x1="406.1615326181096" x2="406.1615326181096" y1="0" y2="-223.2824463478201" stroke="#57df57" stroke-width="1.5739221570605288" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.55497649827172s;animation-duration:50s"></line><line x1="-13.648179343886335" x2="-13.648179343886335" y1="0" y2="-172.08984761936762" stroke="#57df57" stroke-width="0.0033617550775055793" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -18.807762205587853s;animation-duration:25s"></line><line x1="386.84629099910654" x2="386.84629099910654" y1="0" y2="-112.13000695386452" stroke="#57df57" stroke-width="1.1202650463166008" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.24805257175218s;animation-duration:50s"></line><line x1="561.7936833016348" x2="561.7936833016348" y1="0" y2="-236.19170376960724" stroke="#272af7" stroke-width="4.073116517886245" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -46.54727084556848s;animation-duration:25s"></line><line x1="604.5618736540779" x2="604.5618736540779" y1="0" y2="-163.3778723363228" stroke="#57df57" stroke-width="3.0057174518456686" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -37.32039199465983s;animation-duration:25s"></line><line x1="271.8727243054533" x2="271.8727243054533" y1="0" y2="-245.4895882306315" stroke="#57df57" stroke-width="3.045722801717309" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -15.761829724869447s;animation-duration:50s"></line><line x1="539.1255865773196" x2="539.1255865773196" y1="0" y2="-268.60145805812283" stroke="#272af7" stroke-width="0.18426718877657677" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -45.91050097531119s;animation-duration:50s"></line><line x1="673.3997336528772" x2="673.3997336528772" y1="0" y2="-270.0777766408676" stroke="#272af7" stroke-width="2.1033736743802223" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -21.38301386104169s;animation-duration:50s"></line><line x1="-126.93726886326218" x2="-126.93726886326218" y1="0" y2="-198.09491711256567" stroke="#57df57" stroke-width="1.776841713933327" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -5.924975407294608s;animation-duration:25s"></line><line x1="-420.4689348327744" x2="-420.4689348327744" y1="0" y2="-292.2120474374632" stroke="#57df57" stroke-width="1.487351364706846" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -38.70724691165028s;animation-duration:25s"></line><line x1="176.650363241048" x2="176.650363241048" y1="0" y2="-92.38143307264367" stroke="#57df57" stroke-width="3.935533992529553" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -4.935449796973923s;animation-duration:25s"></line><line x1="-602.2586913286609" x2="-602.2586913286609" y1="0" y2="-119.14246910935228" stroke="#57df57" stroke-width="2.2918296692582043" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -39.35289504815573s;animation-duration:50s"></line><line x1="500.5570683125239" x2="500.5570683125239" y1="0" y2="-92.84200049998171" stroke="#57df57" stroke-width="3.942345438061867" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -10.145283374801872s;animation-duration:50s"></line><line x1="-637.9725968303844" x2="-637.9725968303844" y1="0" y2="-149.95040476988214" stroke="#272af7" stroke-width="4.065072860280984" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -2.457111585848837s;animation-duration:50s"></line><line x1="643.4251994969376" x2="643.4251994969376" y1="0" y2="-236.9182226456028" stroke="#272af7" stroke-width="3.8867536392157556" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -49.321982112304106s;animation-duration:25s"></line><line x1="-613.2884062464386" x2="-613.2884062464386" y1="0" y2="-257.0383238098934" stroke="#57df57" stroke-width="0.43481278096297427" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -5.7404905692100545s;animation-duration:50s"></line><line x1="367.02778366823156" x2="367.02778366823156" y1="0" y2="-134.39619630708194" stroke="#57df57" stroke-width="1.2080954100444496" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -29.196538345754206s;animation-duration:50s"></line><line x1="-116.76820042609192" x2="-116.76820042609192" y1="0" y2="-121.82304634389561" stroke="#272af7" stroke-width="0.9622564678475709" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.702058931394774s;animation-duration:50s"></line><line x1="-571.72773808947" x2="-571.72773808947" y1="0" y2="-146.5967776881734" stroke="#57df57" stroke-width="0.9612932290257015" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.454680680789055s;animation-duration:50s"></line><line x1="503.4343131696135" x2="503.4343131696135" y1="0" y2="-134.4213257209173" stroke="#272af7" stroke-width="0.005621838362741549" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -43.48870937114773s;animation-duration:25s"></line><line x1="-455.45510301027434" x2="-455.45510301027434" y1="0" y2="-123.4900949739238" stroke="#57df57" stroke-width="4.576249697359255" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.024064400376734s;animation-duration:25s"></line><line x1="590.3961612020546" x2="590.3961612020546" y1="0" y2="-125.96091270554686" stroke="#57df57" stroke-width="1.8881223920639545" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -20.197390285994864s;animation-duration:50s"></line><line x1="-74.20048247119291" x2="-74.20048247119291" y1="0" y2="-162.57002920785368" stroke="#272af7" stroke-width="4.134493465598551" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -14.01768217364281s;animation-duration:50s"></line><line x1="627.4937593833932" x2="627.4937593833932" y1="0" y2="-192.57763258478508" stroke="#57df57" stroke-width="0.35048031961611437" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -1.8049405036555721s;animation-duration:50s"></line><line x1="518.4199408878753" x2="518.4199408878753" y1="0" y2="-109.00142934149667" stroke="#57df57" stroke-width="3.3064630115016436" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -36.515662840842545s;animation-duration:50s"></line><line x1="148.75828606967252" x2="148.75828606967252" y1="0" y2="-111.77459561755555" stroke="#57df57" stroke-width="1.2088307902411832" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -24.23992085262955s;animation-duration:50s"></line><line x1="-227.18359827691717" x2="-227.18359827691717" y1="0" y2="-263.74907743353594" stroke="#272af7" stroke-width="1.1941603950800173" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -26.49415118938856s;animation-duration:50s"></line><line x1="-2.214092513166932" x2="-2.214092513166932" y1="0" y2="-276.9254825838915" stroke="#272af7" stroke-width="3.917675232829759" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -3.5003939569127396s;animation-duration:25s"></line><line x1="-340.4500095786867" x2="-340.4500095786867" y1="0" y2="-107.69174104127666" stroke="#272af7" stroke-width="3.5338901954118915" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -26.462842217078208s;animation-duration:50s"></line><line x1="-617.1039946404328" x2="-617.1039946404328" y1="0" y2="-288.21024707038464" stroke="#272af7" stroke-width="2.3575172187459925" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -32.90217482039511s;animation-duration:25s"></line><line x1="-523.704526287274" x2="-523.704526287274" y1="0" y2="-104.41365407044098" stroke="#272af7" stroke-width="3.400104396969125" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.82559685909186s;animation-duration:25s"></line><line x1="152.36937760758673" x2="152.36937760758673" y1="0" y2="-227.6745124716676" stroke="#57df57" stroke-width="2.2920198776424505" stroke-linecap="round" class="ld ld-speed-dash" style="animation-delay: -27.180710059066715s;animation-duration:50s"></line>
+                        </g>
+                      </g>
+                    </g>
+                    </svg>
+            </div>
+        </header>
+        <section class="info">
+            <div class="aboutMe" id="aboutMe">
+                <div class="text">
+                    <h2><span class="blue">01.</span>About Me</h2>
+                    <p>I'm hard working and dedicated Junior Front End Developer with keen eye for detail, determination to deliver best possible quality and outside the box ideas.</p>
+                    <p>I am motivated, well organised and comfortable with working under pressure.</p>
+                    <p>My main goal in web design is to make websites responsive, original and accessible across all browsers.</p>
+                </div>
+                <div>
+                    <img class="myPhoto" src="/images/myPhotoPlaceholder.png" alt="This is just placeholder of my photo.">
+                </div>
+            </div>
+            <div class="stack" id="myStack">
+                <h2><span class="blue">02.</span>My Stack</h2>
+                <div class="myStack">
+                    <div class="stackImages">
+                        <img src="/images/htmlnew.png" alt="HTML logo">
+                        <img src="/images/cssnew.png" alt="CSS logo">
+                        <img src="/images/jsnew.png" alt="ES6 logo">
+                        <img src="/images/jquerynew.png" alt="jQuery logo">
+                        <img src="/images/vuenew.png" alt="Vue.js logo">
+                        <img src="/images/WordPress.png" alt="WordPress logo">
+                    </div>
+                    <div class="animatedText">
+                        <ul>
+                            <li class="one">Place</li>
+                            <li class="two">Style</li>
+                            <li class="three">Interact</li>
+                            <li class="four">Lightweight</li>
+                            <li class="five">Progress</li>
+                            <li class="six">Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="myProjects" id="myProjects">
+                <h2 class="space"><span class="blue">03.</span>Stuff I've Worked On</h2>
+                <ul>
+                    <li>
+                        <div>
+                            <div class="folder-top">
+                                <a href="https://github.com/13Groszy/Tesla_News_API"><i class='bx bxl-github'></i></a>
+                            </div>
+                            <div class="folder-text">
+                                <h2><a href="https://rapidapi.com/topdrive940/api/tesla-news-and-rumours/" target="_blank">Tesla news API</a></h2>
+                                <p class="diff">API with few endpoints, app check few sources of news like Guardian, NY Times or BBC and in feedback we get news about Tesla.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="folder-top">
+                                <a href="https://github.com/13Groszy/Fylo_landing_page"><i class='bx bxl-github'></i></a>
+                            </div>
+                            <div class="folder-text">
+                                <h2><a href="https://fylopage13.netlify.app" target="_blank">Fylo Landing Page</a></h2>
+                                <p class="diff">Landing page created as a part of challenge from Frontend Mentor.
+                                    The challenge was created only for 375px and 1440px width - without RWD.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="folder-top">
+                                <a href="https://github.com/13Groszy/Weather-Quotes-App"><i class='bx bxl-github'></i></a>
+                            </div>
+                            <div class="folder-text">
+                                <h2><a href="https://quote-the-weather.netlify.app" target="_blank">Simple Weather App</a></h2>
+                                <p class="diff">Simple project with API usage. Draw random quote on a click or check the actual weather in any city.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="folder-top">
+                                <a href="https://github.com/13Groszy/Portfolio"><i class='bx bxl-github'></i></a>
+                            </div>
+                            <div class="folder-text">
+                                <h2><a href="https://mdaszkiewicz.netlify.app" target="_blank">This portfolio website</a></h2>
+                                <p class="diff">Simple website which show my skills and tell few words about me.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="folder-top">
+                            </div>
+                            <div class="folder-text">
+                                <h2><a href="https://graff.mdaszkiewicz.co.uk" target="_blank">Photographer Landing Page</a></h2>
+                                <p class="diff">Template project for a photographer. Website is fully responsive and have contact form.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="folder-top">
+                                <a href="https://github.com/13Groszy/DinoGame"><i class='bx bxl-github'></i></a>
+                            </div>
+                            <div class="folder-text">
+                                <h2><a href="https://dinothegame.netlify.app" target="_blank">Jumping Human Game</a></h2>
+                                <p class="diff">You know T-Rex Game? I created my own version of it!</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact"  id="contact">
+                <h2 class="space"><span class="blue">04.</span>What's Next?</h2>
+                <h2 class="bigger">Get In Touch</h2>
+                <p>I am currently looking for new opportunities so my inbox is always open.
+                    If you're interested or have a question, send me a pigeon and I'll get back to you as soon as I can!</p>
+                <a class="button" target="_blank" href="mailto:topdrive940@gmail.com">Send a Pigeon</a>
+            </div>
+        </section>
+        <section class="socials">
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/mateusz-daszkiewicz-66371a196/" target="_blank">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/13Groszy" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/13groszuf/" target="_blank">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <p>Designed & Built by Mateusz Daszkiewicz</p>
+            <p>© 2022</p>
+        </footer>
+    </main>
+    <script src="/scripts/jquery-3.6.0.js"></script>
+    <script src="/scripts/app.js"></script>
 </body>
 </html>
